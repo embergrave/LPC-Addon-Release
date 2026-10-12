@@ -1,4 +1,10 @@
-# LPC Addon — current runtime
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="branding/lpc-logo/lpc_logo_white.png">
+  <img src="branding/lpc-logo/lpc_logo_black.png" alt="LPC" width="220">
+</picture>
+<h1>LPC Addon — current runtime</h1>
+</div>
 
 [Download LPC.zip](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/LPC.zip)
 
@@ -20,4 +26,4 @@ The full LPC Source-Available Notice and short as-is disclaimer are in README.md
 
 [LPC.zip.sha256](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/LPC.zip.sha256) verifies the stable runtime ZIP. The filename stays LPC.zip across future versions; the manifest and release title identify the actual version. [release-provenance.json](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/release-provenance.json) and the ZIP's package-files.json identify its version, source revision and per-file hashes.
 
-GitHub's automatic **Source code (zip/tar.gz)** downloads contain only this repository's small metadata README. They are not the addon and contain no runtime or private development code. Download the explicitly named runtime Release asset above.
+GitHub's automatic **Source code (zip/tar.gz)** downloads contain only documentation metadata/assets present at the tag. The preserved current tag contains the original metadata README only. They are not the addon and contain no runtime or private development code. Download the explicitly named runtime Release asset above.
