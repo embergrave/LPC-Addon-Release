@@ -1,29 +1,48 @@
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="branding/lpc-logo/lpc_logo_white.png">
-  <img src="branding/lpc-logo/lpc_logo_black.png" alt="LPC" width="220">
-</picture>
-<h1>LPC Addon — current runtime</h1>
-</div>
+```text
++--------------------------------+
+|     L       PPPP      CCCC     |
+|     L       P   P    C         |
+|     L       PPPP     C         |
+|     L       P        C         |
+|     LLLLL   P         CCCC     |
++---+   +------------------------+
+    |  /
+    | /
+    |/
+```
 
-[Download LPC.zip](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/LPC.zip)
+# LPC Addon
 
-This channel exposes one current LPC runtime package. The release title and ZIP filename state its actual version and development status. Older runtime archives are not published here.
+Pre-written character dialogue and emotes for World of Warcraft: Forever.
 
-## Install
+[Download LPC.zip](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/LPC.zip) · [Verify the download](#verify-the-download)
 
-Close World of Warcraft: Forever. Download the **LPC-<version>.zip Release asset**, extract it, and put the complete LPC folder in Interface/AddOns. LPC.toc belongs directly inside LPC. There is no installer or license-acceptance screen.
+This repository provides one current readable runtime package. The Release title and provenance identify its version and development status.
 
-The runtime Lua code is complete and readable. The catalogue is empty: supply and compile your own current-format persona separately. Back up your addon and character data before updating, preserve authored personas and recompile them afterward. Use /lpc status and /lpc help in game.
+## Install and prepare your persona
+
+1. Close World of Warcraft: Forever.
+2. Download **LPC.zip**, extract it, and place the complete **LPC** folder under `Interface/AddOns/`. Keep `LPC.toc` directly inside that folder.
+3. Start the game, enable LPC, and run `/lpc status` and `/lpc help`.
+
+There is no installer. The catalogue is empty: dialogue requires your own current-format persona, compiled with compatible LPC tooling. Persona JSON alone does not install dialogue, and the compiler is not bundled in this runtime ZIP. Obtain the compatible tools and authoring instructions from the maintainer before preparing a persona.
+
+Use `/lpc personas` to list installed content. Set `/lpc volume 3`, select `/lpc persona <id>` using a listed ID, then run `/lpc enable`. Volume filters dialogue priorities, not sound volume. `/lpc disable` pauses output.
+
+LPC targets Forever's reviewed 1.60.x client family; other WoW products are unsupported. Public output is limited to permitted outdoor contexts. SAY needs fresh eligible player input; EMOTE can use a timer. Client evidence is build-specific; the package does not establish new native game acceptance. Consult its README and Release notes for compatibility limits.
+
+## Update
+
+Close the game and back up the installed addon, authored personas and character data. Install the complete replacement package and recompile your personas: runtime ZIPs contain an empty catalogue. Keep your SavedVariables and check `/lpc status` afterward. Personas use schema 1 / engine 2; pre-1.0 updates support only the current format and may require authoring changes.
+
+## Verify the download
+
+Compare the ZIP's SHA256 with [LPC.zip.sha256](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/LPC.zip.sha256). The stable filename stays **LPC.zip**; [release-provenance.json](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/release-provenance.json) identifies the version and source revision, and `package-files.json` inside the ZIP records file hashes.
+
+GitHub's automatic **Source code (zip/tar.gz)** archives contain documentation and approved documentation assets, not the addon or private development code. Use the named runtime Release asset above.
 
 ## License and notices
 
 Original LPC code may be downloaded, inspected and used personally, including personal copies. Redistribution, rehosting or sale, including modified copies, requires permission from the applicable copyright holder. All other rights are reserved. Independently authored persona rights, third-party licenses, existing contributor permissions and nonwaivable rights are unaffected.
 
-The full LPC Source-Available Notice and short as-is disclaimer are in README.md inside the runtime ZIP; THIRD-PARTY-NOTICES.md is included there. These are source-available terms, not an OSI open-source license. No warranty is provided to the extent permitted by law.
-
-## Verify the download
-
-[LPC.zip.sha256](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/LPC.zip.sha256) verifies the stable runtime ZIP. The filename stays LPC.zip across future versions; the manifest and release title identify the actual version. [release-provenance.json](https://github.com/embergrave/LPC-Addon-Release/releases/download/current/release-provenance.json) and the ZIP's package-files.json identify its version, source revision and per-file hashes.
-
-GitHub's automatic **Source code (zip/tar.gz)** downloads contain only documentation metadata/assets present at the tag. The preserved current tag contains the original metadata README only. They are not the addon and contain no runtime or private development code. Download the explicitly named runtime Release asset above.
+The full LPC Source-Available Notice and as-is disclaimer are in the ZIP's `README.md`; third-party notices are in `THIRD-PARTY-NOTICES.md`. These are source-available terms, not an OSI open-source license. No warranty is provided to the extent permitted by law.
