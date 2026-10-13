@@ -29,7 +29,7 @@ There is no installer. The catalogue is empty: dialogue requires your own curren
 
 Use `/lpc personas` to list installed content. Set `/lpc volume 3`, select `/lpc persona <id>` using a listed ID, then run `/lpc enable`. Volume filters dialogue priorities, not sound volume. `/lpc disable` pauses output.
 
-LPC targets Forever's reviewed 1.60.x client family; other WoW products are unsupported. Public output is limited to permitted outdoor contexts. SAY needs fresh eligible player input; EMOTE can use a timer. Client evidence is build-specific; the package does not establish new native game acceptance. Consult its README and Release notes for compatibility limits.
+LPC requires a compatible World of Warcraft: Forever client; Retail and other WoW products are unsupported. `/lpc status` reports compatibility and output availability. Public output is limited to permitted outdoor contexts. SAY needs fresh eligible player input; EMOTE can use a timer. See the packaged README and [Release notes](https://github.com/embergrave/LPC-Addon-Release/releases/tag/current) for client requirements and limitations.
 
 ## Update
 
